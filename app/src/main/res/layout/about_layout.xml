@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Questions and support at:"
+        android:id="@+id/QnS"
+        android:textStyle="bold"
+        android:layout_below="@+id/veri"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verison:"
+        android:id="@+id/Ver"
+        android:layout_marginTop="109dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0"
+        android:id="@+id/veri"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Ver"
+        android:textIsSelectable="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lybrica@gmail.com"
+        android:id="@+id/QnSi"
+        android:layout_below="@+id/QnS"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="true"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/android:list">
+    </ListView>
+
+</RelativeLayout>

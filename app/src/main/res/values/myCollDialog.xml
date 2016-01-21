@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="myCoolDialog" parent="android:Theme.Dialog">
+        <item name="android:colorForeground">#f0f0</item>
+    </style>
+</resources>

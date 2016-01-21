@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today 09:00         in 5 Hours"
+        android:maxWidth="70dp"
+        android:gravity="right"
+        android:maxLines="3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/item_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/item_name"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/item_color"
+        android:layout_toLeftOf="@+id/item_time"
+        android:maxLines="1"
+        android:minLines="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Name"
+        android:id="@+id/item_name"
+        android:width="300dp"
+        android:maxLines="2"
+        android:minLines="2"
+        android:layout_alignBottom="@+id/item_color"
+        android:layout_alignLeft="@+id/item_title"
+        android:layout_alignStart="@+id/item_title" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:id="@+id/item_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:nestedScrollingEnabled="false"
+        android:src="#f44336" />
+
+</RelativeLayout>

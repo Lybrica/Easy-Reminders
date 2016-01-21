@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+        android:layout_weight="20">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine|textCapSentences"
+        android:id="@+id/editTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:hint="Reminder text"
+        android:maxLength="50" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine|textCapSentences"
+        android:id="@+id/editContent"
+        android:hint="Additional info (optional)"
+        android:scrollbars="vertical"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_above="@+id/radioGroup"
+        android:layout_below="@+id/editTitle" />
+
+
+        <Spinner
+        android:id="@+id/spinnerDate"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="false"
+            android:layout_above="@+id/spinnerBottom"
+        android:layout_marginBottom="4dp"
+            android:layout_alignLeft="@+id/btnAdd"
+            android:layout_marginLeft="10dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="false"
+        android:layout_toEndOf="@id/spinnerDate"
+        android:layout_above="@+id/spinnerBottom"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentRight="false"
+        android:layout_toRightOf="@+id/spinnerDate" />
+
+    <Spinner
+        android:id="@+id/spinnerBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_toEndOf="@id/radioGroup"
+        android:layout_marginBottom="1dp"
+        android:layout_above="@+id/radioG" />
+
+    <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:id="@+id/spinnerWifi"-->
+        <!--android:layout_alignBottom="@+id/radioGroup"-->
+        <!--android:layout_toRightOf="@+id/radioGroup"-->
+        <!--android:layout_marginLeft="15dp" />-->
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioG"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No reminder"
+            android:id="@+id/radioOff"
+            android:checked="true"
+            android:enabled="true" />
+
+        <RadioButton
+            android:id="@+id/radioTop"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@+id/buttonSubmit"
+            android:checked="false"
+            android:clickable="true"
+            android:onClick="OnRadioTopClick"
+            android:text="Date based:    " />
+
+        <RadioButton
+            android:id="@+id/radioBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/radioTop"
+            android:checked="false"
+            android:onClick="OnRadioBotClick"
+            android:text="Time form now:    " />
+
+        <!--<RadioButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="When connected to WiFi:"-->
+            <!--android:id="@+id/radioWifi"-->
+            <!--android:checked="false" />-->
+
+    </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/checkStyle"
+            android:layout_alignParentStart="false"
+            android:id="@+id/radioG"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r1"
+                android:buttonTint="#969696"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r2"
+                android:buttonTint="#f44336"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r3"
+                android:buttonTint="#C2185B"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r4"
+                android:buttonTint="#FFEB3B"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r5"
+                android:buttonTint="#CDDC39"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r6"
+                android:buttonTint="#4CAF50"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r7"
+                android:buttonTint="#0288D1"
+                android:checked="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r8"
+                android:buttonTint="#455A64"
+                android:checked="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r9"
+                android:buttonTint="#512DA8"
+                android:checked="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r10"
+                android:buttonTint="#000000"
+                android:checked="false" />
+        </RadioGroup>
+
+        <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insistent notification"
+        android:id="@+id/checkStyle"
+            android:checked="false"
+            android:layout_above="@+id/btnAdd"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="15dp" />
+
+        <!--<Spinner-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:id="@+id/spinnerRing"-->
+            <!--android:layout_alignTop="@+id/checkStyle"-->
+            <!--android:layout_toEndOf="@id/checkStyle"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:spinnerMode="dropdown"-->
+            <!--android:layout_marginTop="-2dp" />-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/btnDel"
+            android:onClick="OnSetAClick"
+            android:layout_alignTop="@+id/btnAdd"
+            android:layout_alignBottom="@+id/btnAdd"
+            android:layout_below="@+id/checkStyle"
+            android:layout_toLeftOf="@+id/btnAdd" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0"
+            android:text="Add Reminder"
+            android:layout_alignParentEnd="false"
+            android:layout_centerHorizontal="true" />
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Yest"-->
+            <!--android:id="@+id/btnYest"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignEnd="@+id/radioG" />-->
+
+    </RelativeLayout>
+
+</LinearLayout>
